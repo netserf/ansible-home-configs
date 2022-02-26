@@ -1,0 +1,11 @@
+---
+- name: Drop home configs on this host
+  hosts: all
+  tasks:
+    - name: "copy over home directory configs - {{ home_directory }}"
+      copy:
+        src: "{{ item }}"
+        dest: "{{ home_directory }}"
+        mode: "0600"
+      with_items:
+        - "{{ home_files }}"

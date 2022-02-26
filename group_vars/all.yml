@@ -1,0 +1,8 @@
+---
+home_directory: "{{ lookup('env', 'HOME') }}"
+home_files:
+  - .bashrc
+  - .bash_profile
+  - .gitconfig
+  - .tmux.conf
+  - .vimrc

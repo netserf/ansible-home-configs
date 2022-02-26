@@ -1,0 +1,9 @@
+[user]
+	name = netserf
+	email = # TODO replace with real email
+[color]
+	ui = auto
+[push]
+	default = simple
+[credential]
+        helper = cache --timeout=28800

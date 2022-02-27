@@ -1,7 +1,6 @@
 # ansible-home-configs
 
 [![Actions Status](https://github.com/netserf/ansible-home-configs/workflows/Ansible%20Test%20Run/badge.svg)](https://github.com/netserf/ansible-home-configs/actions)
-[![Actions Status](https://github.com/netserf/ansible-home-configs/workflows/Ansible%20Lint/badge.svg)](https://github.com/netserf/ansible-home-configs/actions)
 [![Actions Status](https://github.com/netserf/ansible-home-configs/workflows/Markdown%20Links/badge.svg)](https://github.com/netserf/ansible-home-configs/actions)
 [![Actions Status](https://github.com/netserf/ansible-home-configs/workflows/Markdown%20Lint/badge.svg)](https://github.com/netserf/ansible-home-configs/actions)
 
@@ -12,5 +11,5 @@ A short ansible playbook to customize various linux environments.
 ### Run the playbook locally
 
 ```bash
-ansible-playbook -i inventory/local.ini playbook.yml
+ansible-playbook playbook.yml
 ```

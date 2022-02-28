@@ -5,12 +5,9 @@ on: [push, pull_request]
 jobs:
 
   ansible-lint:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-
     - name: Lint Ansible Playbook
       # replace "master" with any valid ref
       uses: ansible/ansible-lint-action@master
@@ -29,12 +26,9 @@ jobs:
            rich>=9.5.1,<11.0.0
 
   ansible-test-run:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
       with:

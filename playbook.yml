@@ -3,9 +3,15 @@
   hosts: all
   tasks:
     - name: "copy over home directory configs - {{ home_directory }}"
-      copy:
+      ansible.builtin.copy:
         src: "{{ item }}"
         dest: "{{ home_directory }}"
         mode: "0600"
       with_items:
         - "{{ home_files }}"
+
+    - name: "copy over .gitconfig"
+      ansible.builtin.template:
+        src: gitconfig.j2
+        dest: "{{ home_directory }}/.gitconfig"
+        mode: "0600"

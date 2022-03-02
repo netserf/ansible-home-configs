@@ -1,9 +1,6 @@
 ---
+default_directories: ["backups",  "bin",  "dev",  "downloads",  "share", "tmp"]
 home_directory: "{{ lookup('env', 'HOME') }}"
-home_files:
-  - .bashrc
-  - .bash_profile
-  - .tmux.conf
-  - .vimrc
+home_files: [".bashrc", ".bash_profile", ".tmux.conf", ".vimrc"]
 github_username: netserf
 github_email: "todo - replace with email"

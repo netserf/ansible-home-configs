@@ -48,3 +48,4 @@ jobs:
         options: |
           --limit local
           --verbose
+          --vault-password-file=./vault-password.sh

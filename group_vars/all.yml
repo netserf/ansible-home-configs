@@ -13,3 +13,5 @@ github_email: !vault |
 package_list: ["python3.8", "python3.9", "net-tools", "keychain", "tmux",
                "vim", "git", "htop", "curl", "ipcalc", "rsync", "bind9-utils", "tcpdump",
                "traceroute", "jq", "tree", "lsof", "nmap", "ncat", "direnv", "unzip"]
+ssh_files: ["ssh.authorized_keys.vault", "ssh.config.vault"]
+

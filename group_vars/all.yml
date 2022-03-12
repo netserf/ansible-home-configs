@@ -1,5 +1,5 @@
 ---
-default_directories: ["backups",  "bin",  "dev",  "downloads",  "share", "tmp"]
+default_directories: ["backups", "bin", "dev", "downloads", "share", "tmp"]
 home_directory: "{{ lookup('env', 'HOME') }}"
 home_files: [".bashrc", ".bash_profile", ".tmux.conf", ".vimrc"]
 github_username: netserf
@@ -10,3 +10,6 @@ github_email: !vault |
           38663461633333303936653930633531386366373063336365333733303838356334373062343661
           3263643831343136640a313634623135383836313664353133646431663531616666303239333164
           61646236343639356132383861613166333661653731666330303637376236663865
+package_list: ["python3.8", "python3.9", "net-tools", "keychain", "tmux",
+               "vim", "git", "htop", "curl", "ipcalc", "rsync", "bind9-utils", "tcpdump",
+               "traceroute", "jq", "tree", "lsof", "nmap", "ncat", "direnv", "unzip"]

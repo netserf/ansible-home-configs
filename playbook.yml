@@ -30,8 +30,8 @@
         state: directory
         mode: "0700"
 
-    - name: "copy over ssh configs"
-      ansible.builtin.template:
-        src: ssh_config.j2
+    - name: "un-ecrypt and copy over ssh configs"
+      ansible.builtin.copy:
+        src: ssh_config.vault
         dest: "{{ home_directory }}/.ssh/config"
         mode: "0600"

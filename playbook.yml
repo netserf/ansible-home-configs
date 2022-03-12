@@ -32,6 +32,8 @@
 
     - name: "un-ecrypt and copy over ssh configs"
       ansible.builtin.copy:
-        src: ssh_config.vault
-        dest: "{{ home_directory }}/.ssh/config"
+        src: "{{ item }}"
+        dest: "{{ home_directory }}/.ssh/{{ item.split('.')[1] }}"
         mode: "0600"
+      with_items:
+        - "{{ ssh_files }}"

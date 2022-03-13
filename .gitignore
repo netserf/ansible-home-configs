@@ -1,4 +1,4 @@
 *.retry
-TODO
+TODO.txt
 tmp/
 .envrc

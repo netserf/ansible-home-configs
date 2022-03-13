@@ -1,7 +1,13 @@
 ---
-default_directories: ["backups", "bin", "dev", "downloads", "share", "tmp"]
+default_directories: [".ansible", "backups", "bin", "dev", "downloads", "share", "tmp"]
 home_directory: "{{ lookup('env', 'HOME') }}"
-home_files: [".bashrc", ".bash_profile", ".tmux.conf", ".vimrc"]
+home_files:
+  - {'src': ".ansible.cfg", 'dest': "{{ home_directory }}"}
+  - {'src': ".bash_profile", 'dest': "{{ home_directory }}"}
+  - {'src': ".bashrc", 'dest': "{{ home_directory }}"}
+  - {'src': ".tmux.conf", 'dest': "{{ home_directory }}"}
+  - {'src': ".vimrc", 'dest': "{{ home_directory }}"}
+  - {'src': "hosts.ini", 'dest': "{{ home_directory }}/.ansible"}
 github_username: netserf
 github_email: !vault |
           $ANSIBLE_VAULT;1.1;AES256
@@ -14,4 +20,3 @@ package_list: ["python3.8", "python3.9", "net-tools", "keychain", "tmux",
                "vim", "git", "htop", "curl", "ipcalc", "rsync", "bind9-utils", "tcpdump",
                "traceroute", "jq", "tree", "lsof", "nmap", "ncat", "direnv", "unzip"]
 ssh_files: ["ssh.authorized_keys.vault", "ssh.config.vault"]
-
